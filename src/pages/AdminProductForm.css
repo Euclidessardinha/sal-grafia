@@ -1,0 +1,201 @@
+.admin-product-form {
+  margin-top: 30px;
+  padding: 30px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 18px;
+}
+
+.admin-product-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.admin-product-form-header span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c97925;
+}
+
+.admin-product-form-header h2 {
+  margin: 6px 0 0;
+  font-size: 26px;
+}
+
+.admin-product-form-close {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.admin-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.admin-form-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-form-field input,
+.admin-form-field select,
+.admin-form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  background: white;
+  font: inherit;
+  outline: none;
+}
+
+.admin-form-field input:focus,
+.admin-form-field select:focus,
+.admin-form-field textarea:focus {
+  border-color: #c97925;
+}
+
+.admin-form-field textarea {
+  resize: vertical;
+}
+
+.admin-form-field small {
+  color: #777;
+  font-size: 12px;
+}
+
+.admin-form-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 10px 0 25px;
+}
+
+.admin-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: #c97925;
+}
+
+.admin-product-form-error {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 9px;
+  background: #fcebea;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.admin-product-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 10px;
+}
+
+.admin-product-cancel,
+.admin-product-save {
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-product-cancel {
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.admin-product-save {
+  border: none;
+  background: #c97925;
+  color: white;
+}
+
+.admin-product-cancel:disabled,
+.admin-product-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  .admin-product-form {
+    padding: 20px;
+  }
+
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-product-form-actions {
+    flex-direction: column;
+  }
+
+  .admin-product-cancel,
+  .admin-product-save {
+    width: 100%;
+  }
+}
+
+.admin-image-preview {
+  margin-top: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.admin-image-preview img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.admin-image-preview button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.admin-form-field input,
+.admin-form-field textarea,
+.admin-form-field select {
+  color: #222;
+  background: #fff;
+}
+
+.admin-form-field input::placeholder,
+.admin-form-field textarea::placeholder {
+  color: #999;
+  opacity: 1;
+}

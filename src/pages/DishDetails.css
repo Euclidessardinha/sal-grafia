@@ -1,0 +1,1310 @@
+
+/* =========================================================
+   SAL & GRAFIA
+   DISH DETAILS — PREMIUM + RESPONSIVE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.dish-details-page {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background: #f7f3ec;
+
+  color: #173f3b;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.dish-details-header {
+  width: 100%;
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 12px 6%;
+
+  background: #173f3b;
+
+  position: relative;
+  z-index: 10;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.dish-details-brand {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  line-height: 1;
+
+  transition: opacity 0.25s ease;
+}
+
+.dish-details-brand:hover {
+  opacity: 0.92;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.dish-details-brand img {
+  display: block;
+
+  width: 54px;
+  height: 54px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  filter: drop-shadow(
+    0 4px 10px rgba(0, 0, 0, 0.25)
+  );
+}
+
+
+/* =========================================================
+   NOME + SUBTÍTULO
+========================================================= */
+
+.dish-details-brand span {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  color: #ffffff;
+
+  white-space: nowrap;
+}
+
+.dish-details-brand span strong {
+  font-size: 1.05rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+}
+
+.dish-details-brand span small {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.62rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   BOTÃO VER MENU
+========================================================= */
+
+.dish-header-menu {
+  min-height: 42px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 18px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dish-header-menu:hover {
+  background: #c86d4b;
+
+  border-color: #c86d4b;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.dish-details-main {
+  width: min(
+    1180px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+
+  padding: 35px 0 75px;
+}
+
+
+/* =========================================================
+   VOLTAR AO MENU
+========================================================= */
+
+.dish-back-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 40px;
+
+  margin-bottom: 28px;
+
+  color: #6d7774;
+
+  text-decoration: none;
+
+  font-size: 0.88rem;
+
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dish-back-link:hover {
+  color: #c86d4b;
+
+  transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.dish-details-container {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, 0.92fr);
+
+  gap: clamp(
+    35px,
+    5vw,
+    75px
+  );
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   IMAGEM
+========================================================= */
+
+.dish-details-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  background: #e8e2d8;
+
+  box-shadow:
+    0 22px 55px
+    rgba(23, 63, 59, 0.14);
+}
+
+.dish-details-image {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.dish-details-image-wrapper:hover
+.dish-details-image {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   BADGE DESTAQUE
+========================================================= */
+
+.dish-details-featured {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 34px;
+
+  padding: 0 13px;
+
+  border-radius: 999px;
+
+  background: #c86d4b;
+
+  color: #ffffff;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 20px
+    rgba(23, 63, 59, 0.18);
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.dish-details-info {
+  min-width: 0;
+
+  padding-top: 5px;
+}
+
+
+/* =========================================================
+   CATEGORIA
+========================================================= */
+
+.dish-details-category {
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  color: #c86d4b;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+
+  line-height: 1.5;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NOME DO PRATO
+========================================================= */
+
+.dish-details-info h1 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #173f3b;
+
+  font-size: clamp(
+    2rem,
+    4vw,
+    3.6rem
+  );
+
+  font-weight: 900;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   PREÇO
+========================================================= */
+
+.dish-details-price {
+  margin-top: 18px;
+
+  color: #c86d4b;
+
+  font-size: clamp(
+    1.45rem,
+    2.5vw,
+    2rem
+  );
+
+  font-weight: 900;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   SOBRE O PRATO
+========================================================= */
+
+.dish-about {
+  margin-top: 32px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #e4dfd6;
+}
+
+.dish-about h2 {
+  margin: 0 0 12px;
+
+  color: #173f3b;
+
+  font-size: 1.08rem;
+
+  font-weight: 900;
+}
+
+.dish-about p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #6d7774;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   ÁREA DO PEDIDO
+========================================================= */
+
+.dish-order-area {
+  margin-top: 30px;
+
+  padding: 22px;
+
+  border: 1px solid #e4dfd6;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px
+    rgba(23, 63, 59, 0.07);
+}
+
+
+/* =========================================================
+   QUANTIDADE
+========================================================= */
+
+.dish-quantity {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.dish-quantity > span {
+  color: #173f3b;
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CONTROLE DE QUANTIDADE
+========================================================= */
+
+.quantity-control {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0;
+
+  height: 42px;
+
+  overflow: hidden;
+
+  border: 1px solid #ddd7cc;
+
+  border-radius: 12px;
+
+  background: #f7f3ec;
+}
+
+.quantity-control button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #173f3b;
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.quantity-control button:hover {
+  background: #e9e2d8;
+
+  color: #c86d4b;
+}
+
+.quantity-control strong {
+  min-width: 40px;
+
+  text-align: center;
+
+  color: #173f3b;
+
+  font-size: 0.9rem;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   BOTÃO ADICIONAR AO PEDIDO
+========================================================= */
+
+.dish-whatsapp-button {
+  width: 100%;
+
+  min-height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 11px 15px;
+
+  border: 0;
+
+  border-radius: 15px;
+
+  background: #c86d4b;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 28px
+    rgba(200, 109, 75, 0.23);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dish-whatsapp-button:hover {
+  background: #a95438;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 17px 35px
+    rgba(200, 109, 75, 0.3);
+}
+
+.dish-whatsapp-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   ÍCONE DO PEDIDO
+========================================================= */
+
+.whatsapp-icon {
+  width: 43px;
+  height: 43px;
+
+  flex: 0 0 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.16);
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   TEXTO DO PEDIDO
+========================================================= */
+
+.dish-order-text {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  text-align: left;
+}
+
+.dish-order-text small {
+  font-size: 0.6rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+.dish-order-text strong {
+  color: #ffffff;
+
+  font-size: 0.92rem;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   SETA
+========================================================= */
+
+.whatsapp-arrow {
+  margin-left: auto;
+
+  color: #ffffff;
+
+  font-size: 1.3rem;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.dish-details-footer {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 30px 6%;
+
+  background: #173f3b;
+}
+
+.dish-details-footer > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.dish-details-footer strong {
+  color: #ffffff;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.1em;
+}
+
+.dish-details-footer span {
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 0.76rem;
+}
+
+.dish-details-footer a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  transition: color 0.2s ease;
+}
+
+.dish-details-footer a:hover {
+  color: #e7b09b;
+}
+
+
+/* =========================================================
+   PRATO NÃO ENCONTRADO
+========================================================= */
+
+.dish-not-found {
+  width: min(
+    500px,
+    calc(100% - 40px)
+  );
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  padding: 40px 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.dish-not-found-icon {
+  margin-bottom: 20px;
+
+  font-size: 3rem;
+}
+
+.dish-not-found h1 {
+  margin: 0 0 10px;
+
+  color: #173f3b;
+
+  font-size: 2rem;
+
+  font-weight: 900;
+}
+
+.dish-not-found p {
+  margin: 0 0 25px;
+
+  color: #6d7774;
+
+  line-height: 1.6;
+}
+
+.dish-back-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  border-radius: 12px;
+
+  background: #c86d4b;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dish-back-button:hover {
+  background: #a95438;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .dish-details-header {
+    padding: 12px 4%;
+  }
+
+  .dish-details-main {
+    width: min(
+      900px,
+      calc(100% - 40px)
+    );
+  }
+
+  .dish-details-container {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .dish-details-image-wrapper {
+    width: min(
+      100%,
+      650px
+    );
+
+    margin: 0 auto;
+  }
+
+  .dish-details-info {
+    width: min(
+      100%,
+      700px
+    );
+
+    margin: 0 auto;
+  }
+
+  .dish-details-info h1 {
+    font-size: clamp(
+      2rem,
+      5vw,
+      3.2rem
+    );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* HEADER */
+
+  .dish-details-header {
+    min-height: 70px;
+
+    padding: 11px 20px;
+
+    gap: 12px;
+  }
+
+  .dish-details-brand {
+    gap: 8px;
+  }
+
+  .dish-details-brand img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .dish-details-brand span strong {
+    font-size: 0.88rem;
+  }
+
+  .dish-details-brand span small {
+    font-size: 0.54rem;
+  }
+
+  .dish-header-menu {
+    min-height: 38px;
+
+    padding: 0 13px;
+
+    font-size: 0.68rem;
+  }
+
+
+  /* MAIN */
+
+  .dish-details-main {
+    width: calc(100% - 32px);
+
+    padding: 24px 0 50px;
+  }
+
+
+  /* BACK */
+
+  .dish-back-link {
+    min-height: 36px;
+
+    margin-bottom: 20px;
+
+    font-size: 0.82rem;
+  }
+
+
+  /* CONTAINER */
+
+  .dish-details-container {
+    gap: 30px;
+  }
+
+
+  /* IMAGE */
+
+  .dish-details-image-wrapper {
+    border-radius: 20px;
+  }
+
+  .dish-details-featured {
+    top: 12px;
+    left: 12px;
+
+    min-height: 31px;
+
+    padding: 0 11px;
+
+    font-size: 0.67rem;
+  }
+
+
+  /* INFO */
+
+  .dish-details-info h1 {
+    font-size: clamp(
+      1.9rem,
+      9vw,
+      2.7rem
+    );
+
+    line-height: 1.06;
+  }
+
+  .dish-details-price {
+    margin-top: 14px;
+
+    font-size: 1.55rem;
+  }
+
+
+  /* SOBRE */
+
+  .dish-about {
+    margin-top: 25px;
+
+    padding-top: 21px;
+  }
+
+  .dish-about h2 {
+    font-size: 1rem;
+  }
+
+  .dish-about p {
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* PEDIDO */
+
+  .dish-order-area {
+    margin-top: 25px;
+
+    padding: 17px;
+
+    border-radius: 17px;
+  }
+
+  .dish-quantity {
+    margin-bottom: 15px;
+  }
+
+  .dish-quantity > span {
+    font-size: 0.76rem;
+  }
+
+  .quantity-control {
+    height: 40px;
+  }
+
+  .quantity-control button {
+    width: 39px;
+    height: 40px;
+  }
+
+  .quantity-control strong {
+    min-width: 36px;
+  }
+
+
+  /* BOTÃO */
+
+  .dish-whatsapp-button {
+    min-height: 64px;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border-radius: 14px;
+  }
+
+  .whatsapp-icon {
+    width: 39px;
+    height: 39px;
+
+    flex-basis: 39px;
+  }
+
+  .dish-order-text small {
+    font-size: 0.54rem;
+  }
+
+  .dish-order-text strong {
+    font-size: 0.8rem;
+  }
+
+  .whatsapp-arrow {
+    font-size: 1.05rem;
+  }
+
+
+  /* FOOTER */
+
+  .dish-details-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 25px 20px;
+  }
+}
+
+
+/* =========================================================
+   TELEMÓVEL PEQUENO
+========================================================= */
+
+@media (max-width: 480px) {
+
+  /* HEADER */
+
+  .dish-details-header {
+    min-height: 66px;
+
+    padding: 10px 16px;
+
+    gap: 10px;
+  }
+
+  .dish-details-brand {
+    gap: 7px;
+  }
+
+  .dish-details-brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .dish-details-brand span strong {
+    font-size: 0.82rem;
+  }
+
+  .dish-details-brand span small {
+    font-size: 0.49rem;
+  }
+
+  .dish-header-menu {
+    min-height: 36px;
+
+    padding: 0 11px;
+
+    font-size: 0.64rem;
+  }
+
+
+  /* MAIN */
+
+  .dish-details-main {
+    width: calc(100% - 24px);
+
+    padding-top: 18px;
+  }
+
+
+  /* BACK */
+
+  .dish-back-link {
+    min-height: 36px;
+
+    margin-bottom: 16px;
+
+    font-size: 0.76rem;
+  }
+
+
+  /* IMAGE */
+
+  .dish-details-image-wrapper {
+    border-radius: 17px;
+  }
+
+  .dish-details-image {
+    aspect-ratio: 0.95 / 1;
+  }
+
+  .dish-details-featured {
+    top: 10px;
+    left: 10px;
+  }
+
+
+  /* INFO */
+
+  .dish-details-info h1 {
+    font-size: clamp(
+      1.75rem,
+      10vw,
+      2.3rem
+    );
+
+    letter-spacing: -0.035em;
+  }
+
+  .dish-details-category {
+    margin-bottom: 9px;
+
+    font-size: 0.63rem;
+  }
+
+  .dish-details-price {
+    font-size: 1.4rem;
+  }
+
+
+  /* SOBRE */
+
+  .dish-about p {
+    font-size: 0.84rem;
+  }
+
+
+  /* PEDIDO */
+
+  .dish-order-area {
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+  .dish-quantity {
+    gap: 10px;
+  }
+
+  .dish-quantity > span {
+    font-size: 0.72rem;
+  }
+
+  .quantity-control {
+    height: 38px;
+  }
+
+  .quantity-control button {
+    width: 36px;
+    height: 38px;
+  }
+
+  .quantity-control strong {
+    min-width: 34px;
+  }
+
+  .dish-whatsapp-button {
+    min-height: 61px;
+
+    gap: 9px;
+  }
+
+  .whatsapp-icon {
+    width: 37px;
+    height: 37px;
+
+    flex-basis: 37px;
+  }
+
+  .dish-order-text small {
+    font-size: 0.5rem;
+  }
+
+  .dish-order-text strong {
+    font-size: 0.75rem;
+  }
+}
+
+
+/* =========================================================
+   TELEMÓVEL MUITO PEQUENO
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .dish-details-header {
+    padding: 9px 12px;
+
+    gap: 8px;
+  }
+
+  .dish-details-brand {
+    gap: 6px;
+  }
+
+  .dish-details-brand img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .dish-details-brand span strong {
+    font-size: 0.76rem;
+  }
+
+  .dish-details-brand span small {
+    display: none;
+  }
+
+  .dish-header-menu {
+    min-height: 34px;
+
+    padding: 0 9px;
+
+    font-size: 0.6rem;
+  }
+
+
+  .dish-details-main {
+    width: calc(100% - 20px);
+  }
+
+
+  .dish-details-info h1 {
+    font-size: 1.7rem;
+  }
+
+  .dish-details-price {
+    font-size: 1.3rem;
+  }
+
+
+  .dish-order-area {
+    padding: 12px;
+  }
+
+  .dish-quantity {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .dish-whatsapp-button {
+    min-height: 59px;
+  }
+
+  .dish-order-text small {
+    font-size: 0.47rem;
+  }
+
+  .dish-order-text strong {
+    font-size: 0.7rem;
+  }
+}
+
